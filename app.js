@@ -21,7 +21,8 @@ const io=socketio(server);
 // process.env.PORT lets the port be set by Heroku
 
 var port = process.env.PORT || 3000;
-mongoose.connect(process.env.MONGODB_URI||"mongodb+srv://sam:samsingh@cluster0-znal8.mongodb.net/<dbname>?retryWrites=true&w=majority", {
+console.log(process.env.MONGODB_URI)
+mongoose.connect(process.env.MONGODB_URI||"mongodb+srv://sam:samsingh@cluster0-znal8.mongodb.net/chatdatabase?retryWrites=true&w=majority", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,
