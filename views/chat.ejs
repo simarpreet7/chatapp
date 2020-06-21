@@ -522,7 +522,9 @@
 <script src="../public/js/index.js"></script>
 <script>
   function _click(a){
-      window.location.assign("http://localhost:3000/chat/"+a);
+    var c=window.location.href;
+    var d=c.split("/chat/")[0]
+      window.location.assign(d+"/chat/"+a);
   }
   function addfriend(){
     var x=document.getElementById("friend");
@@ -585,7 +587,9 @@
     }
   }
   function back(){
-      window.location.assign("http://localhost:3000/chat/bot");
+    var c=window.location.href;
+    var d=c.split("/chat/")[0]
+      window.location.assign(d+"/chat/"+a);
   }
   function deleteChild(x) { 
         var e = x; 
