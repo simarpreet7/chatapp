@@ -1,0 +1,124 @@
+body{
+    background-image:url("../img/back.png");
+    background-size:auto;
+    font-family:Impact;
+}
+
+.top{
+    height:100px;
+}
+
+.mid{
+    height:550px;
+}
+
+.mid-log{
+    height:450px;
+}
+
+.main{
+    background-color:white;
+    color:#253D5B;
+    height:100%;
+    width:37%;
+    margin:0 auto;
+    border-radius:10px;
+    text-align:center;
+}
+
+.head{
+    padding-top:20px;
+    padding-bottom:10px;
+    border-bottom:2px solid #7FB685;
+    border-radius:10px;
+    font-size:40px;
+    width:30%;
+    margin:0 auto;
+}
+
+.cover{
+text-align:left;
+margin-left:50px;
+margin-top:20px;
+font-family:"Trebuchet MS";
+}   
+
+.user{
+    margin-bottom:5px;
+    font-size:15px;
+}
+
+.pass{
+    margin-bottom:5px;
+    font-size:15px;
+}
+
+button{
+    margin-top:40px;
+    display:inline-block;
+    padding:20px 175px;
+    border:1px solid white;
+    background-color:#176087;
+    color:white;
+    border-radius:10px;
+    font-size:20px;
+    font-family:"Trebuchet MS";
+}
+
+input{
+    border:1px solid lightgray;
+    margin-top:5px;
+    width:80%;
+    padding:10px 10px;
+    border-radius:3px;
+    font-size:15px;
+}
+
+a{
+    color:#35605A;
+    display:inline; 
+}
+
+.log-set{
+    display:inline;
+    color:#14342B;
+    font-weight:normal;   
+}
+
+.phno{
+    margin-bottom:5px;
+    font-size:15px;
+}
+
+#main-list{
+    border:1px solid gray;
+    border-radius:5px;
+    text-align:center;
+    margin:5px auto;
+    width:80%;
+    display:none;
+}
+
+.list-item{
+    margin:20px auto;
+}
+
+.close-cover{
+    border: none;
+    float:right;
+    margin-top:10px;
+    margin-right:10px;
+    opacity:0.8;
+}
+
+.list-but{
+    display:inline-block;
+    padding:20px 75px;
+    border:1px solid white;
+    background-color:#087E8B;
+    color:white;
+    border-radius:10px;
+    font-size:20px;
+    font-family:"Trebuchet MS";
+}
+

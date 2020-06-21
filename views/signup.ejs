@@ -1,0 +1,46 @@
+<!-- <h1> Sign Up Form </h1>
+
+<form method="POST" action="/">
+    <input type="text" name="username" placeholder="username">
+    <input type="password" name="password" placeholder="password">
+    <button> Submit </button>
+</form>
+
+<li><a href="/">Sign Up</a></li>
+<li><a href="/logout">Logout!</a></li>
+<li><a href="/login">Login!</a></li> -->
+<html>
+    <head>
+        <title>
+            Sign in to ChatApp
+        </title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../public/css/stylesheet_login.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="top"></div>
+            <div class="mid">
+                <div class="main">
+                    <form method="POST" action="/"><h1 class="head">Sign Up</h1>
+                    <div class="cover">
+                        <p class="user">Username</p>
+                        <input type="text" name="username" placeholder="Choose a username">
+                    </div>
+                    <div class="cover">
+                        <p class="pass">Password</p>
+                        <input type="password" name="password" placeholder="Choose a password">
+                    </div>
+                    <div class="cover">
+                        <p class="phno">Phone Number</p>
+                        <input type="text" name="phno" placeholder="Enter your phone number">
+                    </div>
+                    <button class="btn btn-primary">SIGNUP</button>
+                    </form>
+                    <p class="log-set">Already have an account? </p><a href="/login">LOGIN</a>
+                </div>    
+            </div>
+        </div>
+    </body>
+</html>

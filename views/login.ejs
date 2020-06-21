@@ -1,0 +1,42 @@
+<!-- <h1>Login</h1>
+
+<form method="POST" action="/login">
+    <input type="text" name="username" placeholder="username">
+    <input type="password" name="password" placeholder="password">
+    <button> Login </button>
+</form>
+
+<li><a href ="/">Sign Up</a></li>
+<li><a href="/logout">Logout!</a></li>
+<li><a href="/login">Login!</a></li> -->
+<html>
+    <head>
+        <title>
+           Log in to ChatApp
+        </title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../public/css/stylesheet_login.css">     
+    </head>
+    <body>
+        <div class="container">
+            <div class="top"></div>
+            <div class="mid-log">
+                <div class="main">
+                    <form method="POST" action="/login"><h1 class="head">Login</h1>
+                    <div class="cover">
+                        <p class="user">Phone Number</p>
+                        <input type="text" name="username" placeholder="Phone number">
+                    </div>
+                    <div class="cover">
+                        <p class="pass">Password</p>
+                        <input type="password" name="password" placeholder="Password">
+                    </div>
+                    <button class="btn btn-primary">LOGIN</button>
+                    </form>
+                    <p class="log-set">Want to create an account? </p><a href="/">Sign Up</a>
+                </div>    
+            </div>
+        </div>
+    </body>
+</html>

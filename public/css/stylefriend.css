@@ -1,0 +1,106 @@
+#friend{
+    border-radius:10px;
+    border:1px solid lightgray;
+    background-color:whitesmoke;
+    width:80%;
+    margin:10px auto;
+    z-index:+10;
+    display:none;
+    text-align:center;
+}
+
+#block{
+    border-radius:10px;
+    border:1px solid lightgray;
+    background-color:whitesmoke;
+    width:80%;
+    margin:10px auto;
+    z-index:+10;
+    display:none;
+    text-align:center;
+}
+
+.head-friend{
+    color:#2F1B25;
+}
+
+.close{
+    display:inline;
+    border: none;
+
+}
+
+.close-cover{
+    border: none;
+    float:right;
+    margin-top:10px;
+    margin-right:10px;
+    opacity:0.2;
+}
+
+.close-cover:hover{
+    opacity:0.8;
+}
+
+.friend-in{
+    border:1px solid lightgray;
+    margin-top:2px;
+    width:80%;
+    padding:3px 2px;
+    border-radius:3px;
+    font-size:10px;
+    margin-bottom:3px;
+}
+
+.friend-sub{
+    margin-top:40px;
+    display:inline-block;
+    padding:20px 175px;
+    width:70%;
+    border:1px solid white;
+    background-color:#176087;
+    color:white;
+    border-radius:10px;
+    font-size:20px;
+    font-family:"Trebuchet MS";
+    margin-bottom:10px;
+}
+
+.bigger{
+    width:100%;
+    text-align:center;
+    height:500px;
+    margin:100 auto;
+}
+
+
+#main-list{
+    border:1px solid gray;
+    border-radius:5px;
+    text-align:center;
+    margin:5px auto;
+    width:80%;
+    display:none;
+    background-color:whitesmoke;
+}
+
+.list-item{
+    margin:5px auto;
+   
+}
+
+.list-but{
+    display:inline-block;
+    padding:2px 5px;
+    border:1px solid white;
+    background-color:#087E8B;
+    color:white;
+    border-radius:2px;
+    font-size:10px;
+    font-family:"Trebuchet MS";
+    opacity:0.7;
+}
+
+.list-but:hover{
+    opacity:0.9;
+}
