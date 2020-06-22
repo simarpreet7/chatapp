@@ -74,7 +74,7 @@
 
 <div id="block" style="display: none;">
   <button class="close-cover" onclick="closeblock()"><img src="../public/img/close.png"></button><br>
-  <h1 class="head-friend">Block User</h1>
+  <h3 class="head-friend">Block User</h3>
   <form action="addname" method="POST">
   <input id="_bname" type="text" name="_name" placeholder="Enter a name" class="friend-in">
   <input id="_bno" type="text" name="_no" placeholder="Enter a phone number" class="friend-in">
@@ -424,7 +424,7 @@
                               <spa>Online</span>
                             </div>
                             <div class="col-sm-1 col-xs-1  heading-dot pull-right">
-                              <i class="fa fa-ellipsis-v fa-2x  pull-right" aria-hidden="true" onclick="back()"></i>
+                              <i class="fa fa-arrow-left fa-2x  pull-right" aria-hidden="true" onclick="back()"></i>
                             </div>
                           </div>
                           <!-- Heading End -->
@@ -568,8 +568,8 @@
   }
   function check(){
     if($(window).width()<700){
-      deleteChild(document.getElementById("left_list"))
-        document.getElementById("left_list").remove();
+      deleteChild(document.getElementById("left_list"))   //left-list->comp fullchat,left-part->mobile
+        document.getElementById("left_list").remove();    //fullchat->
       var x=window.location.href;
       var z=x.split("chat/")[1];
       if(z!=="bot"){

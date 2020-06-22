@@ -20,7 +20,7 @@ body{
     background-color:white;
     color:#253D5B;
     height:100%;
-    width:37%;
+    width:450px;
     margin:0 auto;
     border-radius:10px;
     text-align:center;
@@ -120,5 +120,11 @@ a{
     border-radius:10px;
     font-size:20px;
     font-family:"Trebuchet MS";
+}
+
+@media screen and (max-width: 650px) {
+        .top{
+            height:10px;
+        }    
 }
 
