@@ -22,7 +22,7 @@ const io=socketio(server);
 
 var port = process.env.PORT || 3000;
 
-mongoose.connect(process.env.MONGODB_URI||"mongodb://localhost/chatdb", {
+mongoose.connect(process.env.MONGODB_URI||"mongodb+srv://sam:samsingh@cluster0-znal8.mongodb.net/chatdatabase?retryWrites=true&w=majority", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,
@@ -141,7 +141,7 @@ app.post("/chat/addname",isLoggedIn,function(req,res){
    if(err)
    console.log(err)//no error possible
       User.findOne({username:req.body._name},function(err1,doc1){
-          if(_.isEmpty(doc1)) res.send("friend not joined ")
+          if(_.isEmpty(doc1)) res.send(doc1)
           else if(err1) res.send(err1)
           else{
               var x=doc.friends;
