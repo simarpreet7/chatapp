@@ -58,7 +58,7 @@
  <div id="main-list" >
   <button class="close-cover" onclick="closelist()"><img src="../public/img/close.png"></button><br>
   <div class="list-item"><button class="list-but" onclick="addfriend()">Add Friend</button></div>
-  <div class="list-item"><button class="list-but" onclick="openblock()">Block User</button></div>
+  <div class="list-item"><button class="list-but" onclick="openblock()">Delete</button></div>
   <div class="list-item"><a href="/logout"><button class="list-but">Logout</button></a></div>
 </div>    
 
@@ -74,12 +74,12 @@
 
 <div id="block" style="display: none;">
   <button class="close-cover" onclick="closeblock()"><img src="../public/img/close.png"></button><br>
-  <h3 class="head-friend">Block User</h3>
-  <form action="addname" method="POST">
+  <h3 class="head-friend">Delete</h3>
+  
   <input id="_bname" type="text" name="_name" placeholder="Enter a name" class="friend-in">
   <input id="_bno" type="text" name="_no" placeholder="Enter a phone number" class="friend-in">
-  <button id="_block" class="btn btn-primary" style="width:70%;margin-bottom:5px;margin-top:10px; ">Block</button>
-</form>
+  <button id="_delete" class="btn btn-primary" style="width:70%;margin-bottom:5px;margin-top:10px; ">Delete</button>
+
 </div>
 
 
@@ -269,6 +269,10 @@
 
   <!-- new code -->
   
+
+
+<input style="visibility: hidden;width: 0px;height: 0px;" value="<%= myname %>" id="myself">
+
   <div class="col-sm-4 side" id="left_part">
     <div class="side-one">
       <!-- Heading -->
@@ -307,7 +311,7 @@
 <div id="main-list">
 <button class="close-cover" onclick="closelist()"><img src="../public/img/close.png"></button><br>
 <div class="list-item"><button class="list-but" onclick="addfriend()">Add Friend</button></div>
-<div class="list-item"><button class="list-but" onclick="openblock()">Block User</button></div>
+<div class="list-item"><button class="list-but" onclick="openblock()">Delete</button></div>
 <div class="list-item"><a href="/logout"><button class="list-but">Logout</button></a></div>
 </div>    
 
@@ -323,12 +327,12 @@
 
 <div id="block" style="display: none;">
 <button class="close-cover" onclick="closeblock()"><img src="../public/img/close.png"></button><br>
-<h1 class="head-friend">Block User</h1>
-<form action="addname" method="POST">
+<h1 class="head-friend">Delete </h1>
+
 <input id="_bname" type="text" name="_name" placeholder="Enter a name" class="friend-in">
 <input id="_bno" type="text" name="_no" placeholder="Enter a phone number" class="friend-in">
-<button id="_block" class="btn btn-primary" style="width:70%;margin-bottom:5px;margin-top:10px; ">Block</button>
-</form>
+<button id="_delete2" class="btn btn-primary" style="width:70%;margin-bottom:5px;margin-top:10px; ">Delete</button>
+
 </div>
 
 
@@ -576,6 +580,10 @@
         document.getElementById("fullchat").style.display="block";
          document.getElementById("left_part").style.display="none";
       }
+      else{
+        deleteChild(document.getElementById("fullchat"))   
+        document.getElementById("fullchat").remove(); 
+      }
     }
     else{
       deleteChild(document.getElementById("fullchat"))
@@ -585,6 +593,15 @@
 
         document.getElementById("left_part").remove();
     }
+    var w=window.location.href;
+    var d=w.split("/chat/")[1]
+    
+        if(d=="bot"){}
+    else{
+        var c=document.getElementById("conversation")
+        c.scrollTop = c.scrollHeight;}
+                                   
+                                 
   }
   function back(){
     var c=window.location.href;
@@ -601,6 +618,25 @@
             child = e.lastElementChild; 
         } 
     } 
+
+     $('#_delete').on('click', function() { 
+     
+          		   
+               $.ajax({ 			  url: 'delete', 			  method: 'DELETE', data:{_bname:$('#_bname')[0].value}			}) 	
+                     .done(function(data) { 
+                     window.location.reload(true); 
+                      console.log(data)
+                       });        
+      });
+      $('#_delete2').on('click', function() { 
+     
+          		   
+     $.ajax({ 			  url: 'delete', 			  method: 'DELETE', data:{_bname:$('#_bname')[0].value}			}) 	
+           .done(function(data) { 
+           window.location.reload(true); 
+            console.log(data)
+             });        
+});
 </script>
 
 </html>

@@ -22,7 +22,7 @@ const io=socketio(server);
 
 var port = process.env.PORT || 3000;
 
-mongoose.connect(process.env.MONGODB_URI||"mongodb+srv://sam:samsingh@cluster0-znal8.mongodb.net/chatdatabase?retryWrites=true&w=majority", {
+mongoose.connect(process.env.MONGODB_URI||"mongodb://localhost/chatdb", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,
@@ -75,7 +75,14 @@ var susers={};
             message: data.msg,
             r_by:data.send_to
         })
+       
+        
     }
+    socket.emit('msg_rcv_own',{
+        message: data.msg,
+        sender:data.send_by     
+    })
+  
         var newmessage = new message({
             text: data.msg,
             s_by: susers[socket.id],
@@ -172,9 +179,53 @@ app.post("/chat/addname",isLoggedIn,function(req,res){
 
       })
  });
+
 })
 
 
+
+
+
+
+app.delete("/chat/delete",isLoggedIn,function(req,res){
+   
+    friend.findOne({user_name:req.user.username},function(err,doc){
+      if(err)
+      console.log(err)//no error possible
+         User.findOne({username:req.body._bname},function(err1,doc1){
+             if(_.isEmpty(doc1)) res.send(doc1)
+             else if(err1) res.send(err1)
+             else{
+                 var x=doc.friends;
+                 for( var i = 0; i < x.length; i++){ if ( x[i] ===req.body._bname ) { x.splice(i, 1); i--; }}
+                 friend.updateOne({user_name:req.user.username},{friends:x},function(err2,doc2){
+                     if(err2) res.send(err2)
+                     else 
+                     {
+                       friend.findOne({user_name:req.body._bname},function(err4,doc4){
+                           if(err4)
+                           res.send(err4)
+                           else{
+                               var z=doc4.friends;
+                               for( var i = 0; i < z.length; i++){ if ( z[i] ==req.user.username ) { z.splice(i, 1); i--; }}
+                               friend.updateOne({user_name:req.body._bname},{friends:z},function(err5,doc5){
+                                   if(err5) res.send(err5)
+                                   else{
+                                      res.send(req.body)
+                                   }
+                               })
+   
+                           }
+                       })
+                     }
+                 })
+                 
+             }
+   
+         })
+    });
+
+    })   
 
 // Auth Routes
 
