@@ -18,10 +18,11 @@
   },
   "homepage": "https://github.com/simarpreet7/chatapp#readme",
   "dependencies": {
-    "express": "*",
-    "express-session": "*",
+    "bad-words": "^3.0.3",
     "body-parser": "^1.19.0",
     "ejs": "^3.1.3",
+    "express": "*",
+    "express-session": "*",
     "http": "0.0.1-security",
     "lodash": "^4.17.15",
     "mongoose": "^5.9.18",

@@ -10,9 +10,11 @@ const user = require("./models/user");
     LocalStrategy           = require("passport-local"),
     http                    =require("http"),
     socketio                =require("socket.io"),
+    Filters = require('bad-words'),
+  
     passportLocalMongoose   = require("passport-local-mongoose");
 
-
+var filter = new Filters();
 var app = express();
 var _ = require("lodash");
 const server=http.createServer(app); 
@@ -72,19 +74,19 @@ var susers={};
             
         io.to(users[data.send_to]).emit('msg_rcv', {
             s_by: susers[socket.id],//issue
-            message: data.msg,
+            message: filter.clean(data.msg),
             r_by:data.send_to
         })
        
         
     }
     socket.emit('msg_rcv_own',{
-        message: data.msg,
+        message: filter.clean(data.msg),
         sender:data.send_by     
     })
   
         var newmessage = new message({
-            text: data.msg,
+            text: filter.clean(data.msg),
             s_by: susers[socket.id],
             r_by:data.send_to,
          
