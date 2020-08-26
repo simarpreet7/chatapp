@@ -54,17 +54,19 @@ app.use("/public", express.static("public"));
  //socket
 var users={};
 var susers={};
+var online={};
  io.on('connection', function (socket) {
  
-  
+    online[socket.handshake.query.loggeduser]=1
     users[ socket.handshake.query.loggeduser] =socket.id
     susers[socket.id ] =socket.handshake.query.loggeduser
     console.log(users);
      socket.on('disconnect', () => {
-         
+        online[socket.handshake.query.loggeduser]=0 
        delete users[socket.handshake.query.loggeduser];
        delete   susers[socket.id ];
-       console.log(users);
+      
+        console.log(users);
        
 
       });
@@ -73,7 +75,7 @@ var susers={};
         if(users[data.send_to]&&socket.handshake.query.talking_to==data.send_to){//user is online
             
         io.to(users[data.send_to]).emit('msg_rcv', {
-            s_by: susers[socket.id],//issue
+            s_by: susers[socket.id],
             message: filter.clean(data.msg),
             r_by:data.send_to
         })
@@ -136,7 +138,7 @@ app.get("/chat/:id",isLoggedIn, function(req, res){
                     { $and: [{r_by: req.params.id},  {s_by: req.user.username}] }
                 ]
             },(err,message_list)=>{
-                 res.render("chat",{myname:req.user.username,friend:friend_list[0],message:message_list,chat_with:req.params.id});
+                 res.render("chat",{myname:req.user.username,friend:friend_list[0],message:message_list,chat_with:req.params.id,isonline:online[req.params.id]});
               
             });
         }
