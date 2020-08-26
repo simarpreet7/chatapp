@@ -17,6 +17,9 @@ to be written by author soon
 https://drive.google.com/file/d/179gi0xHbndTBn9mCzcpA-C2gW6SZPpH4/view?usp=drivesdk
 
 
+## Apk file
+https://drive.google.com/file/d/1-7pi7UO9cfIuStiDn8t6EklLFE1s_49K/view?usp=sharing
+
 ## Running
 https://enigmatic-garden-84250.herokuapp.com/
 or 
