@@ -15,7 +15,7 @@ to be written by author soon
 
 ## srs
 
-https://docs.google.com/document/d/18X_SfXFnQlb58_v-sd8i7LlYLITVVZX9iA2Y6WJSk7k/edit
+https://drive.google.com/file/d/1NXd2tlIaqZ3TkmUbpLD6ddNGMnJBkUIs/view?usp=sharing
 
 ## Demo
 https://drive.google.com/file/d/179gi0xHbndTBn9mCzcpA-C2gW6SZPpH4/view?usp=drivesdk
