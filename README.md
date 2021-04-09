@@ -13,6 +13,10 @@ node app.js
 
 to be written by author soon
 
+## srs
+
+https://docs.google.com/document/d/18X_SfXFnQlb58_v-sd8i7LlYLITVVZX9iA2Y6WJSk7k/edit
+
 ## Demo
 https://drive.google.com/file/d/179gi0xHbndTBn9mCzcpA-C2gW6SZPpH4/view?usp=drivesdk
 
