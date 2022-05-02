@@ -25,10 +25,9 @@ https://drive.google.com/file/d/179gi0xHbndTBn9mCzcpA-C2gW6SZPpH4/view?usp=drive
 https://drive.google.com/file/d/1-7pi7UO9cfIuStiDn8t6EklLFE1s_49K/view?usp=sharing
 
 ## Running
-https://enigmatic-garden-84250.herokuapp.com/
+https://weallchat.herokuapp.com/
 or 
 http://weallchat.ml/
-
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
