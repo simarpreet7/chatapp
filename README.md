@@ -22,7 +22,7 @@ https://drive.google.com/file/d/179gi0xHbndTBn9mCzcpA-C2gW6SZPpH4/view?usp=drive
 
 
 ## Apk file
-https://drive.google.com/file/d/1-7pi7UO9cfIuStiDn8t6EklLFE1s_49K/view?usp=sharing
+https://drive.google.com/file/d/1Wv1DCI-LcH5Z82zD9PjMUeJzgFmxdHFK/view?usp=sharing
 
 ## Running
 https://weallchat.herokuapp.com/
